@@ -1,0 +1,12 @@
+Architechture
+3 Convolution layers with batch norm and the 3rd layer has dropout of 0.1 1 Max pool layer
+
+1 Transition layer of 1D Convolution
+
+2 Convolution layers with batch norm followed by a maxpool
+
+1 Transition layer of 1D Convolution
+
+Output layer of 1 convolution and a 1FC layer
+
+Total of 6594 parameters with highest accuracy at 99.22
