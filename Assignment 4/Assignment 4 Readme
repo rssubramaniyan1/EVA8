@@ -1,1 +1,162 @@
+Problem Statement
 
+In this assignment with 3 attempts and less than 10k parameters achieve 99.4% accuracy. All 3 attempts are part of the same notebook 
+
+Each of the 3 attempts are clearly defined below blocks
+
+  The test accuracy of 99.4% is met using 10114 paremeters in attempt 2 without GAP/FC
+
+  Attempt 1 clearly set up the architechture with ~8k parameters and high accuracy of 99.35% without GAP/FC
+
+  Attempt 3 was fun with ~6k parameters with GAP/FC and accuracy of 99.26%
+
+
+Attempt 1:
+
+The objective is to set up a network that is a base to achieve the objective of 99.4% accuracy within 15 epochs.
+In this attempt 1 the goal is not to hit 99.4 but get as close as possible to desired target with architechture using least number of 
+parameters with scope for optimization in the subsequent two attempts.
+
+Input Data
+
+Includes normalization and random roatation of (+/- 7deg)
+
+Architechture:
+
+4 convolution Blocks , 2 max pool, NO GAP, NO FC
+
+Convolution Block 1 - Two convolutions with batch norm and drop out at 10%
+
+Max pool layer 1
+
+Convolution Block 2 : Two convolution Layers with
+
+  First layer a 1-d convolution with ReLu, batchnorm and dropout (0.1)
+  Second layer a 2-d convolution with ReLu, batchnorm and dropout (0.1)
+
+Max pool layer 2
+
+Convolution Block 3 - Two convolution Layers with
+
+  First layer a 1-d convolution with ReLu, batchnorm and dropout (0.1)
+  Second layer a 2-d convolution with ReLu, batchnorm and dropout (0.1)
+
+Convolution Block 4 (Output Layer) -
+
+  Output of 10 using kernel size = 5
+
+TOTAL NUMBER OF PARAMETERS
+
+Total params: 8,010
+
+RESULTS
+
+  Test Accuracy consistently greater than 99.20 from the epoch no.5
+  Highest accuracy 99.35 epoch no.13
+
+Learnings for next attempt
+
+  Increase the parameters in convolution blocks 1-3 by adding 1 additional convolution with each block having one 1-D convolution and two 2-D convolution
+  Shift the Max Pool Layer
+  No GAP or FC layer
+
+
+Attempt 2
+
+  The objective is to set up a network based on learnings from attempt 1 along with some additional tweaks to ensure the accuracy target of 99.40% is met.
+
+  The new architechture has consistent accuracy > 99% right from epoch 1 and hit 99.44% in epoch 12. Objective of assignment met in attempt2
+
+  Introduced scheduler and removed dropdown/batch norm from the first conv block as part of the tweaks to improve the accuracy in this attempt
+
+Input Data
+
+  Includes normalization and random roatation of (+/- 7deg)
+
+Architechture:
+
+  4 convolution Blocks , 2 max pool, NO GAP, NO FC
+
+Convolution Block 1: Three convolutions with no batch norm and drop out at 10%
+
+Max pool layer 1
+
+Convolution Block 2: Three convolution Layers with
+
+  First layer a 1-d convolution with ReLu, batchnorm and dropout (0.1)
+  Second layer a 2-d convolution with ReLu, batchnorm and dropout (0.1)
+  Third layer a 2-d convolution with ReLu, batchnorm and dropout (0.1)
+
+Max pool layer 2
+
+Convolution Block 3: Two convolution Layers with
+
+  First layer a 1-d convolution with ReLu, batchnorm and dropout (0.1) 
+  Second layer a 2-d convolution with ReLu, batchnorm and dropout (0.1)
+
+Convolution Block 4 (Output Layer)
+
+  Output of 10 using kernel size = 5
+
+TOTAL NUMBER OF PARAMETERS
+
+  Total params: 10,114
+
+RESULTS
+
+  Test Accuracy consistently greater than 99% from the epoch no.1 Highest accuracy 99.44 epoch no.12
+
+Learnings for next attempt
+
+  What is the highest possible accuracy that can be attained with lowest parameters
+  Try to drop 50% of the parameters from attempt 2 and check for highest accuracy achieved
+  
+  
+Attempt 3
+  The objective is to set up a network based on learnings from attempt 1 and attempt 2 to get the number of 
+  parameters < 7k and try and achieve highest possible accuracy
+
+  Removed scheduler and increased LR=0.02 from attempt 2
+
+  Achieved highest accuracy of 99.26% in epoch 14 with ~6k parameters
+
+Input Data
+
+  Includes normalization and random roatation of (+/- 7deg)
+
+Architechture:
+
+  3 convolution Blocks , 2 max pool, 1 GAP, 1 FC
+
+  Convolution Block 1: Three convolutions with no batch norm and drop out at 10%
+
+  Max pool layer 1
+
+  Convolution Block 2: Three convolution Layers with
+
+    First layer a 1-d convolution with ReLu, batchnorm and dropout (0.1)
+    Second layer a 2-d convolution with ReLu, batchnorm and dropout (0.1)
+    Third layer a 2-d convolution with ReLu, batchnorm and dropout (0.1)
+  Max pool layer 2
+
+  Convolution Block 3: Two convolution Layers with
+
+    First layer a 1-d convolution with ReLu, batchnorm and dropout (0.1)
+    Second layer a 2-d convolution with ReLu, batchnorm and dropout (0.1)
+  
+  Gap Layer with kernel size = 5
+
+  FC Layer
+
+TOTAL NUMBER OF PARAMETERS
+
+  Total params: 6,086
+
+RESULTS
+
+  Test Accuracy consistently greater than 99% from the epoch no.1 Highest accuracy 99.44 epoch no.12
+
+To discuss for better understanding
+
+  what is the impact of the lr rate and step size?
+  Does the decrease in the number of parameters affect the choice of LR and step size
