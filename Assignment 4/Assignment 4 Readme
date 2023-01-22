@@ -49,7 +49,7 @@ TOTAL NUMBER OF PARAMETERS
 
 Total params: 8,010
 
-RESULTS
+RESULTS:
 
   Test Accuracy consistently greater than 99.20 from the epoch no.5
   Highest accuracy 99.35 epoch no.13
