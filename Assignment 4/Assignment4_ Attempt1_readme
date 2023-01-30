@@ -1,0 +1,33 @@
+# Attempt 1
+
+# Target:
+
+#     Get the set-up right - Done
+
+#     Set Transforms - Done
+
+#     Set Data Loader - Done
+
+#     Set Basic Working Code -Done
+
+#     Set Basic Training & Test Loop --Done
+
+#     Start with a network with less than 10k parameters - Basically a good start
+# _______________________________________________________________________________________________________________________________
+# Results:
+
+#     Parameters: 9198
+
+#     Best Training Accuracy: 98.9267
+
+#     Best Test Accuracy: 99.31
+# _____________________________________________________________________________________________________________________________
+# Analysis:
+
+#     Model is generalizing well with lower training accuracy and higher test accuracy
+
+#     Optimizing model in the next step to increase the test accuracy with same model
+
+#     Since we have already included batchnorm and dropout in attempt1 we will experiment various data augmentatin methods
+
+# #____________________________________________________________________________________________________________________________

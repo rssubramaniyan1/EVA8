@@ -1,0 +1,29 @@
+<!-- Attempt 3
+
+Target:
+
+    Include GAP and FC layer to reduce the no of params compared to Ateempt 2
+
+    Tweak the architechture from attempt 2 to try and achieve higher accuracy despite lower no of params
+
+    Include the scheduler for changing the LR rate
+____________________________________________________________________________________________________________
+
+Results:
+
+    Parameters: 6134
+
+    Best Training Accuracy: 98.6717 (EPOCH 14)
+
+    Best Test Accuracy: 99.27 (EPOCH 14)
+____________________________________________________________________________________________________________
+
+Analysis:
+
+    Increase a layer in convolution block-2 for a higher receptive field before the second max pool layer
+    
+    Addition of two fc layers post the gap layer
+    
+    Despite a decrease of 33% in the parameters from attemp 2achieved accuracy of 99.27%
+    
+    99.27 accuracy in epoch 14 with epochs 10,11,12,13 having accuracy of 99.06, 99.22,99.13 and 99.09 respectively -->

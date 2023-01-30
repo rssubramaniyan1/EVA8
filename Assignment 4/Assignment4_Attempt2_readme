@@ -1,0 +1,36 @@
+<!-- Attempt 2
+
+Target:
+
+    Improve the test accuracy from attempt1
+
+    This is is done by including a random rotation of +/- 7 deg for input images
+    Increase the batch size to 128 from 64 in attempt 1
+____________________________________________________________________________________________________
+
+Results:
+
+    Parameters: 9198
+
+    Best Training Accuracy: 98.70
+
+    Best Test Accuracy: 99.50
+____________________________________________________________________________________________________
+
+Analysis:
+
+    We made our training harder by including rotation of input images
+
+    The harder training has resulted in lower train accuracy compared to attempt1
+
+    Increased batch size to 128 from 64 has allowed the model to learn from model to learn from more samples per iteration possibly contributing to the increased accuracy
+
+    99.30 accuracy in epoch 7 with epochs 12,13,14 having accuracy of 99.34, 99.37, 99.50 respectively
+
+    The test accuracy has however increased above 99.4 (epoch 14) in this attempt meeting the assignment objective of 99.4 accuracy with less than 10k params and 15 epochs
+
+    We will go for the third attempt by including few things
+        
+        Increase train accuracy above 99
+        
+        Lower the param count by including gap and fc layer -->
