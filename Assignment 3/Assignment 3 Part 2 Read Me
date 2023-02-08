@@ -7,6 +7,6 @@ Architechture
 
 1 Transition layer of 1D Convolution
 
-Output layer of 1 convolution and a 1FC layer
+Output block of 1 convolution and a 1FC layer
 
 Total of 6594 parameters with highest accuracy at 99.22
