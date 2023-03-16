@@ -25,4 +25,7 @@
     Tried various combinations of max pool and dilated cov
 
     Error always at 2.30 / Accuracy = 10% consistently across different architechtures. This needs fixing.
+    
+ ![Network Summary]('C:\Users\5051072\Desktop\Network Summary.png)
+ 
 
